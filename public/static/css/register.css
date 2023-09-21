@@ -7,6 +7,9 @@
       max-width: 330px;
       padding: 1rem;
     }
+    .NutriGlucox__card{
+      min-width: 18rem;
+    }
     
     .form-signin .form-floating:focus-within {
       z-index: 2;
@@ -47,6 +50,18 @@
         .input-group-append{
           margin: auto !important;
         }
+
+
+        .NutriGlucox__container{
+          max-width: 100% !important;
+        }
+
+      }
+      @media (max-width: 1000px) {
+        .NutriGlucox__card{
+          min-width: 10rem;
+        }
+
       }
 
       .b-example-divider {

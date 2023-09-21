@@ -111,10 +111,10 @@ const HomePage = () => {
 
 
             <div class="input-group mb-3 w-50 m-auto">
-                <input type="text" class="form-control" id="recipes__search__value" placeholder="Search" aria-label="Search"/>
-                    <div class="input-group-append">
+                <input type="text" class="form-control" id="recipes__search__value" placeholder="Search" aria-label="Search" />
+                <div class="input-group-append">
                     <button className="btn btn-outline-warning mx-2" onClick={(e) => searchRecipes(e)}>Search</button>
-                    </div>
+                </div>
             </div>
 
             {/* All Recipes  */}
@@ -123,25 +123,25 @@ const HomePage = () => {
             <div id="resultsContainer"></div>
 
             <div id="all_recipes_results">
-                <div className="container mt-5 align-center">
+                <div className="container mt-5 align-center NutriGlucox__container">
 
-
-                    {recipes.map((recipe) => {
-                        return (
-                            <>
-                                <div class="card mx-2 my-2 d-inline-block" style={{ width: "18rem" }}>
-                                    <img class="card-img-top" src={recipe.image} alt="Card image cap" />
-                                    <div class="card-body">
-                                        <a class="card-title" target='_blank' href={`https://www.google.com/search?q=${recipe.title}`}>{recipe.title}</a>
-                                        <p class="card-text">Calories: {recipe.calories} | Protein: {recipe.protein} | Fat: {recipe.fat
-                                        } | Carbs: {recipe.carbs}</p>
-                                        {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+                    <div className="card-group">
+                        {recipes.map((recipe) => {
+                            return (
+                                <>
+                                    <div class="NutriGlucox__card card mx-2 my-2 d-inline-block" >
+                                        <img class="card-img-top" src={recipe.image} alt="Card image cap" />
+                                        <div class="card-body">
+                                            <a class="card-title" target='_blank' href={`https://www.google.com/search?q=${recipe.title}`}>{recipe.title}</a>
+                                            <p class="card-text">Calories: {recipe.calories} | Protein: {recipe.protein} | Fat: {recipe.fat
+                                            } | Carbs: {recipe.carbs}</p>
+                                            {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+                                        </div>
                                     </div>
-                                </div>
-                            </>
-                        )
-                    })}
-
+                                </>
+                            )
+                        })}
+                    </div>
                 </div>
 
 
