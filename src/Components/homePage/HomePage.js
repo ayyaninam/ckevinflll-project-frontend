@@ -101,10 +101,21 @@ const HomePage = () => {
             <Header />
 
             {/* Search Form  */}
-            <form className="d-flex w-25 justify-content-center align-center m-auto mt-5" >
-                <input className="form-control me-2" id="recipes__search__value" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-warning" onClick={(e) => searchRecipes(e)}>Search</button>
-            </form>
+            <h2 className='mt-4 d-flex justify-content-center align-center m-auto mb-2'><b>NutriGlucox</b></h2>
+
+
+
+            {/* <form className=" d-flex">
+                <input className="form-control me-2" />
+            </form> */}
+
+
+            <div class="input-group mb-3 w-50 m-auto">
+                <input type="text" class="form-control" id="recipes__search__value" placeholder="Search" aria-label="Search"/>
+                    <div class="input-group-append">
+                    <button className="btn btn-outline-warning mx-2" onClick={(e) => searchRecipes(e)}>Search</button>
+                    </div>
+            </div>
 
             {/* All Recipes  */}
 
@@ -112,7 +123,6 @@ const HomePage = () => {
             <div id="resultsContainer"></div>
 
             <div id="all_recipes_results">
-
                 <div className="container mt-5 align-center">
 
 
